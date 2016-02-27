@@ -58,6 +58,7 @@ import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
+import android.content.Intent;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -762,6 +763,10 @@ public class Camera2BasicFragment extends Fragment
      */
     private void takePicture() {
         lockFocus();
+        //showToast("EVERYTHING IS AWESOME!!!!");
+        //TODO call processing commands
+        startActivity(new Intent(getActivity(), Processed.class));
+
     }
 
     /**

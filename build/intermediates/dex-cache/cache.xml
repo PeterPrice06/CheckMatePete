@@ -2,53 +2,67 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Peter\AndroidStudioProjects\Camera2Basic\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
+        jar="C:\Users\badda_000\Documents\my stuff\vtHacksIII\CheckMatePete\Application\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.2.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
-        <dex dex="C:\Users\Peter\AndroidStudioProjects\Camera2Basic\Application\build\intermediates\pre-dexed\debug\internal_impl-23.1.0-2cfc07f32c232e07aec45c5e69993c6982712515.jar" />
+        sha1="bc599eb9531da9d18bc58ec4eb0b1a1d895f6839">
+        <dex dex="C:\Users\badda_000\Documents\my stuff\vtHacksIII\CheckMatePete\Application\build\intermediates\pre-dexed\debug\classes-f1b16a2b427ca21942042209a02845e15d66abc4.jar" />
     </item>
     <item
-        jar="C:\Users\Peter\AndroidStudioProjects\Camera2Basic\Application\build\intermediates\exploded-aar\com.android.support\support-v13\23.1.0\jars\libs\internal_impl-23.1.0.jar"
+        jar="C:\Users\badda_000\Documents\my stuff\vtHacksIII\CheckMatePete\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="076c7d9e22cc325b8008ff799e0c06dfb8eefdf3">
-        <dex dex="C:\Users\Peter\AndroidStudioProjects\Camera2Basic\Application\build\intermediates\pre-dexed\debug\internal_impl-23.1.0-7293a3b534248092786177ef62506af976a0af0f.jar" />
+        sha1="e5f32fa48a3eb2de0c987025c11b6e3864b634d9">
+        <dex dex="C:\Users\badda_000\Documents\my stuff\vtHacksIII\CheckMatePete\Application\build\intermediates\pre-dexed\debug\classes-a58756ad27035198d13d3dd1d50f1c63358a5254.jar" />
     </item>
     <item
-        jar="C:\Users\Peter\AndroidStudioProjects\Camera2Basic\Application\build\intermediates\exploded-aar\com.android.support\support-v13\23.1.0\jars\classes.jar"
+        jar="C:\Users\badda_000\Documents\my stuff\vtHacksIII\CheckMatePete\Application\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="1a57337a520bf40b9ad1e074cb780527dffa1aac">
-        <dex dex="C:\Users\Peter\AndroidStudioProjects\Camera2Basic\Application\build\intermediates\pre-dexed\debug\classes-1241a9d6bdaab1b8afac6f7d6db8f9552e8fdb79.jar" />
+        sha1="8c108c22c99e794eff255bb34d2a461200c4cbb0">
+        <dex dex="C:\Users\badda_000\Documents\my stuff\vtHacksIII\CheckMatePete\Application\build\intermediates\pre-dexed\debug\classes-7e33110208a2a1c159a01432aa3111b2619dbcdd.jar" />
     </item>
     <item
-        jar="C:\Users\Peter\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
+        jar="C:\Users\badda_000\Documents\my stuff\vtHacksIII\CheckMatePete\Application\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
-        <dex dex="C:\Users\Peter\AndroidStudioProjects\Camera2Basic\Application\build\intermediates\pre-dexed\debug\support-annotations-23.1.0-e5f3faf4a9f4d96aaaa5fd7820c3ee235e7ba89a.jar" />
+        sha1="6e3578f92f7462d1a935a1d36173e3bdd1234976">
+        <dex dex="C:\Users\badda_000\Documents\my stuff\vtHacksIII\CheckMatePete\Application\build\intermediates\pre-dexed\debug\classes-e9d3793bc31a9069cfe700aaef3258c60f8a518e.jar" />
     </item>
     <item
-        jar="C:\Users\Peter\AndroidStudioProjects\Camera2Basic\Application\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.0\jars\classes.jar"
+        jar="C:\Users\badda_000\Documents\my stuff\vtHacksIII\CheckMatePete\Application\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="4fcf0b1879f8caf497c073e1432d398e9e2988c1">
-        <dex dex="C:\Users\Peter\AndroidStudioProjects\Camera2Basic\Application\build\intermediates\pre-dexed\debug\classes-91b5b852c3b5f8593f558f2e23f9985565a53e43.jar" />
+        sha1="292a9fa091757208efa65e77eef63088247e51f3">
+        <dex dex="C:\Users\badda_000\Documents\my stuff\vtHacksIII\CheckMatePete\Application\build\intermediates\pre-dexed\debug\classes-291fc0fdd9cde786f050d2aaae70e8eb11a7e461.jar" />
     </item>
     <item
-        jar="C:\Users\Peter\AndroidStudioProjects\Camera2Basic\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
+        jar="C:\Users\badda_000\Documents\my stuff\vtHacksIII\CheckMatePete\Application\build\intermediates\exploded-aar\com.android.support\support-v13\23.2.0\jars\libs\internal_impl-23.2.0.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
-        <dex dex="C:\Users\Peter\AndroidStudioProjects\Camera2Basic\Application\build\intermediates\pre-dexed\debug\classes-cf60d644fa955c8066056e814e14ce52cc2a3774.jar" />
+        sha1="58d0010cb4373696cfdc5894c4b23649af58ed18">
+        <dex dex="C:\Users\badda_000\Documents\my stuff\vtHacksIII\CheckMatePete\Application\build\intermediates\pre-dexed\debug\internal_impl-23.2.0-74bca5a268d8d09b8344d95fc50b833af6eaaf56.jar" />
     </item>
     <item
-        jar="C:\Users\Peter\AndroidStudioProjects\Camera2Basic\Application\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.1.0\jars\classes.jar"
+        jar="C:\Users\badda_000\Documents\my stuff\vtHacksIII\CheckMatePete\Application\build\intermediates\exploded-aar\com.android.support\support-v13\23.2.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="d96886efea7cc74fbb3abd0e3b51d5638fc57be0">
-        <dex dex="C:\Users\Peter\AndroidStudioProjects\Camera2Basic\Application\build\intermediates\pre-dexed\debug\classes-69114783e49890f6277c39fdd21af66c4dff8636.jar" />
+        sha1="f3a3189a228a65d03b3ea92a1b58a2b44bc7366e">
+        <dex dex="C:\Users\badda_000\Documents\my stuff\vtHacksIII\CheckMatePete\Application\build\intermediates\pre-dexed\debug\classes-bd20c1dd368fbdb66679d637b32290738dd64342.jar" />
+    </item>
+    <item
+        jar="C:\Users\badda_000\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.2.0\support-annotations-23.2.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="c5bf571bb10462bd90e5419ade67793f71acbc87">
+        <dex dex="C:\Users\badda_000\Documents\my stuff\vtHacksIII\CheckMatePete\Application\build\intermediates\pre-dexed\debug\support-annotations-23.2.0-35097a8d7e8b1a7d5b2935723509b54accd69a84.jar" />
+    </item>
+    <item
+        jar="C:\Users\badda_000\Documents\my stuff\vtHacksIII\CheckMatePete\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\jars\libs\internal_impl-23.2.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6e239441500605809818997dd63b62a947195f8c">
+        <dex dex="C:\Users\badda_000\Documents\my stuff\vtHacksIII\CheckMatePete\Application\build\intermediates\pre-dexed\debug\internal_impl-23.2.0-e197059c7659fd6a50587fc6ba4a2de062124361.jar" />
     </item>
 
 </items>
