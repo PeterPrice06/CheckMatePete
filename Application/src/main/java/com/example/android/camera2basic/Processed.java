@@ -7,12 +7,16 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Toast;
+import android.widget.TextView;
+import android.widget.EditText;
+import android.util.Log;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
-public class Processed extends Activity {
+public class Processed extends Activity implements View.OnClickListener{
     /**
      * Whether or not the system UI should be auto-hidden after
      * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
@@ -86,6 +90,34 @@ public class Processed extends Activity {
         mVisible = true;
 
         //TODO set values from processing
+
+        findViewById(R.id.btn_calculate).setOnClickListener(this);
+        findViewById(R.id.btn_confirm).setOnClickListener(this);
+    }
+
+
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btn_confirm: {
+                //Toast.makeText(getApplicationContext(), "data Confirmed", Toast.LENGTH_SHORT).show();
+                Log.i("CheckMate", "data confirmed");
+                break;
+            }
+            case R.id.btn_calculate: {
+                //Toast.makeText(getApplicationContext(), "calculating", Toast.LENGTH_SHORT).show();
+                Log.i("CheckMate", "calculating!");
+                TextView display = (TextView)findViewById(R.id.tv_tip);
+                EditText total = (EditText)findViewById(R.id.et_total);
+                EditText percent = (EditText)findViewById(R.id.et_tipPercentage);
+                if (total.getText().toString() == ""){
+                    total.setText("0.00");
+                    Log.i("CheckMate", "empty total string, set to \"0.00\" ");
+                }
+                float tempValue = Float.parseFloat(total.getText().toString()) * Float.parseFloat(percent.getText().toString())/10;
+                display.setText(Float.toString(tempValue));
+                break;
+            }
+        }
     }
 
     @Override
