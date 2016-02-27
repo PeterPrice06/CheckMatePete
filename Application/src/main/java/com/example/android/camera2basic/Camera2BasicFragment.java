@@ -60,6 +60,11 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 import android.content.Intent;
 
+import com.reimaginebanking.api.java.NessieClient;
+import com.reimaginebanking.api.java.NessieException;
+import com.reimaginebanking.api.java.NessieResultsListener;
+import com.reimaginebanking.api.java.models.Customer;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -763,7 +768,24 @@ public class Camera2BasicFragment extends Fragment
      */
     private void takePicture() {
         lockFocus();
-        //showToast("EVERYTHING IS AWESOME!!!!");
+        Log.i("info", "PETER TEST");
+        NessieClient nessieClient = NessieClient.getInstance();
+        nessieClient.setAPIKey("ba7c2af9690af2027d775938b9e9ea83");
+
+        nessieClient.getCustomers(new NessieResultsListener() {
+            @Override
+            public void onSuccess(Object result, NessieException e) {
+                Log.i("info", "PETER onSuccess");
+                if(e == null) {
+                    // No errors
+                    ArrayList<Customer> customers = (ArrayList<Customer>) result;
+                    Log.i("info", "PETER" + customers.get(0).getFirst_name());
+                } else {
+                    Log.e("getCustomers Nessie", e.toString());
+                }
+            }
+        });
+
         //TODO call processing commands
         startActivity(new Intent(getActivity(), Processed.class));
 
