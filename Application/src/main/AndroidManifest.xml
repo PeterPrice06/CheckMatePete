@@ -17,7 +17,7 @@
     package="com.example.android.camera2basic">
 
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
@@ -40,7 +40,22 @@
             android:name=".Processed"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_processed"
-            android:theme="@style/FullscreenTheme"></activity>
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".DataTable"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_data_table"
+            android:theme="@style/FullscreenTheme" />
+
+        <receiver android:name=".TableItem">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/table_item_info" />
+        </receiver>
     </application>
 
 </manifest>

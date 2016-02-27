@@ -3,29 +3,16 @@ package com.example.android.camera2basic;
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.Activity;
-import android.app.Fragment;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Toast;
-import android.widget.TextView;
-import android.widget.EditText;
-import android.util.Log;
-
-import com.reimaginebanking.api.java.NessieClient;
-import com.reimaginebanking.api.java.NessieException;
-import com.reimaginebanking.api.java.NessieResultsListener;
-import com.reimaginebanking.api.java.models.Customer;
-
-import java.util.ArrayList;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
-public class Processed extends Activity implements View.OnClickListener{
+public class DataTable extends Activity {
     /**
      * Whether or not the system UI should be auto-hidden after
      * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
@@ -54,6 +41,12 @@ public class Processed extends Activity implements View.OnClickListener{
             // Note that some of these constants are new as of API 16 (Jelly Bean)
             // and API 19 (KitKat). It is safe to use them, as they are inlined
             // at compile-time and do nothing on earlier devices.
+            mContentView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE
+                    | View.SYSTEM_UI_FLAG_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                    | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                    | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                    | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
         }
     };
     private View mControlsView;
@@ -94,64 +87,25 @@ public class Processed extends Activity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_processed);
+        setContentView(R.layout.activity_data_table);
 
         mVisible = true;
-
-        //TODO set values from processing
-
-        findViewById(R.id.btn_calculate).setOnClickListener(this);
-        findViewById(R.id.btn_confirm).setOnClickListener(this);
-    }
+        //mControlsView = findViewById(R.id.fullscreen_content_controls);
+        //mContentView = findViewById(R.id.fullscreen_content);
 
 
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.btn_confirm: {
-                //Toast.makeText(getApplicationContext(), "data Confirmed", Toast.LENGTH_SHORT).show();
-                Log.i("CheckMate", "data confirmed");
-                //post to nessi
-                NessieClient nessieClient = NessieClient.getInstance();
-                nessieClient.setAPIKey("ba7c2af9690af2027d775938b9e9ea83");
-
-                nessieClient.getCustomers(new NessieResultsListener() {
-                    @Override
-                    public void onSuccess(Object result, NessieException e) {
-                        Log.i("info", "PETER onSuccess");
-                        if (e == null) {
-                            // No errors
-                            ArrayList<Customer> customers = (ArrayList<Customer>) result;
-                            Log.i("info", "PETER" + customers.get(0).getFirst_name());
-                        } else {
-                            Log.e("getCustomers Nessie", e.toString());
-                        }
-                    }
-                });
-                //get accounts
-                //search accounts for nickname == et_payment
-                //if no, add account
-                //post purchase to account
-                //start tableActivity
-                //MyItemRecyclerViewAdapter viewControls =
-                //startActivity(new Intent(, DataTable.class));
-                break;
+        // Set up the user interaction to manually show or hide the system UI.
+        mContentView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toggle();
             }
-            case R.id.btn_calculate: {
-                //Toast.makeText(getApplicationContext(), "calculating", Toast.LENGTH_SHORT).show();
-                Log.i("CheckMate", "calculating!");
-                TextView display = (TextView)findViewById(R.id.tv_tip);
-                EditText total = (EditText)findViewById(R.id.et_total);
-                EditText percent = (EditText)findViewById(R.id.et_tipPercentage);
-                if (total.getText().toString().isEmpty()){
-                    total.setText("0.00");
-                    Log.i("CheckMate", "empty total string, set to \"0.00\" ");
-                }
-                Log.i("CheckMate", total.getText().toString());
-                float tempValue = (Float.parseFloat(total.getText().toString()) * Float.parseFloat(percent.getText().toString()))/100;
-                display.setText(Float.toString(tempValue));
-                break;
-            }
-        }
+        });
+
+        // Upon interacting with UI controls, delay any scheduled hide()
+        // operations to prevent the jarring behavior of controls going away
+        // while interacting with the UI.
+        //findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
     }
 
     @Override
@@ -178,6 +132,7 @@ public class Processed extends Activity implements View.OnClickListener{
         if (actionBar != null) {
             actionBar.hide();
         }
+        mControlsView.setVisibility(View.GONE);
         mVisible = false;
 
         // Schedule a runnable to remove the status and navigation bar after a delay
@@ -188,7 +143,9 @@ public class Processed extends Activity implements View.OnClickListener{
     @SuppressLint("InlinedApi")
     private void show() {
         // Show the system bar
-
+        mContentView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION);
+        mVisible = true;
 
         // Schedule a runnable to display UI elements after a delay
         mHideHandler.removeCallbacks(mHidePart2Runnable);
