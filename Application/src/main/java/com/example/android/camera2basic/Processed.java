@@ -134,6 +134,7 @@ public class Processed extends Activity implements View.OnClickListener{
                 //start tableActivity
                 //MyItemRecyclerViewAdapter viewControls =
                 //startActivity(new Intent(, DataTable.class));
+                startActivity(new Intent(getBaseContext(), DataTable.class));
                 break;
             }
             case R.id.btn_calculate: {

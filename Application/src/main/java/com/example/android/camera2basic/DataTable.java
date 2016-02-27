@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ListView;
+
+import java.util.List;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -101,6 +104,11 @@ public class DataTable extends Activity {
                 toggle();
             }
         });
+
+        //mystical for loop of happiness
+        ListView newView = (ListView)findViewById(R.id.lv_sadness);
+        TableItem tempItem = new TableItem();
+
 
         // Upon interacting with UI controls, delay any scheduled hide()
         // operations to prevent the jarring behavior of controls going away
